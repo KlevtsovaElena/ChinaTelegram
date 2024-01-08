@@ -1,0 +1,21 @@
+version: '3.3'
+
+services:
+
+  frontend:
+    build: 
+      context: .
+      dockerfile: Dockerfile-nginx
+    volumes:
+      - ./../site/:/var/www
+    ports: 
+      - 8080:80
+
+  php:
+    build: 
+      context: .
+      dockerfile: Dockerfile-php
+    volumes:
+      - ./../site/:/var/www
+    ports:
+      - 9010:9000

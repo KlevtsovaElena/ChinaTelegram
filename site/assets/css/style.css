@@ -1,0 +1,485 @@
+body {
+    padding: 0;
+    margin: 0 auto;
+    background-color:white;
+    width: 800px;
+    font-family: 'Noto Sans Mende Kikakui', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+div, p, a, input, ::placeholder {
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Noto Sans Mende Kikakui', sans-serif;
+}
+
+#message {
+    overflow-y: scroll;
+    background-color: whitesmoke;
+    height: 75vh;
+    border: 0.5px solid black;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center center;
+}
+
+.header {
+    background-color: rgb(179 184 186);
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    /* box-shadow: 0px 0px 10px black; */
+}
+
+.header-name {
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: bolder;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name {
+    max-width: 100%;
+    padding-left: 10px;
+    height: 25px;
+    margin-right: 5px;
+    border-radius: 10px;
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: wheat;
+    font-style: italic;
+}
+
+.text {
+    max-width: 400px;
+    border-radius: 10px;
+    font-size: 15px;
+    border-radius: 0 15px;
+    color: white;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+.time {
+    max-width: 100%;
+    height: 20px;
+    text-align: end;
+    line-height: 20px;
+    margin-top: -5px;
+    font-size: 10px;
+    padding-right: 5px;
+}
+
+.margin-top {
+    margin-top: 5px;
+}
+
+.window {
+    min-width: 40px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    padding-right: 10px;
+    background-color: rgb(137 187 2565);
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px steelblue;
+}
+
+.sendmessage {
+    background-color: rgba(128, 128, 128, 0.34);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    border-radius: 0 0 10px 10px;
+    border-bottom: 0.5px solid black;
+    box-sizing: border-box;
+    border-left: 0.5px solid black;
+    border-right: 0.5px solid black;
+}
+
+.footer {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.about-us {
+    color: rgb(160,160,160);
+    opacity: 0.8;
+}
+
+.send {
+    margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 35px;
+    /* padding: 5px; */
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    height: 35px;
+    background-color: rgba(211, 211, 211);
+}
+
+.send-pic {
+    width: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* margin-left: 1px; */
+    transition: all 0.3s;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.send-pic:hover {
+    transform: scale(1.3);
+    transition: all 0.3s;
+}
+
+#usertext {
+    width: 300px;
+    padding: 10px;
+    /* border-radius: 15px; */
+    /* box-shadow: 1px 2px 5px grey; */
+    background-color: rgb(212, 212, 212);
+    border: none;
+}
+
+.left {
+    text-align: left;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6px;
+    border-radius: 10px;
+    transition: all 0.6s;
+}
+
+.right {
+    display: flex;
+    text-align: end;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+    border-radius: 10px 10px 0px 10px;
+    transition: all 0.6s;
+}
+.gog{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.logopng {
+    width: 40px;
+}
+
+.burger {
+    width: 30px;
+    background-size: cover;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.menu {
+    width: 25px;
+    background-size: cover;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#menu-window {
+    border-radius: 20px 0px 0px 20px;
+    position: absolute;
+    border: 1px solid black;
+    width: 250px;
+    background-color: rgba(211, 211, 211);
+    height: 80vh;
+    z-index: -2;
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    overflow-y: auto;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu {
+    width: 150px;
+    background-size: cover;
+    margin-left: 50px;
+    cursor: pointer;
+    display: flex;
+}
+
+input {
+    outline: none;
+}
+
+#name-menu{
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+
+}
+
+.sideMenu {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 20px;
+    background-color: rgba(211, 211, 211);
+    padding: 10px;
+    border-bottom: 1px
+    solid black;
+    margin: 15px;
+    box-shadow: 0px 0.5px 1px black;
+    border-radius: 10px;
+    transition: all 0.4s;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+}
+
+.sideMenu:hover {
+    background-color: white;
+    transition: all 0.4s;
+}
+
+
+.status {
+    max-width: 200px;
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.side-menu-activ {
+    left: -250px !important;
+    transition: all 0.5s;
+}
+#bg-wallpapers {
+    text-align: center;
+    margin-top: 10px;
+    transition: all 0.4s;
+}
+
+.lot{
+    display: inline-block;
+    position: relative;
+    width: 90px;
+    height: 61px;
+    background-size: cover;
+    margin: 7px;
+    border-radius: 0 20px;
+    overflow: hidden;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: 0.5px solid black;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px black;
+}
+
+.cursor{
+    cursor: pointer;
+}
+ 
+.d-none{
+    display: none;
+}
+.non-active{
+    opacity: 0%;
+    cursor: default;
+    z-index: -1;
+}
+.right-x {
+    text-align: end;
+    margin-top: 10px;
+    padding-right: 15px;
+    color: black;
+}
+
+.emoji {
+    width: 25px;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+    padding: 5px;
+    text-align: center;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.emoji:hover {
+    transform: scale(1.2);
+    transition: all 0.4s;
+}
+
+.border-b {
+    border-bottom: 1px solid black;
+}
+
+#dateContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.showDate {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: whitesmoke;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+@media (max-width:1310px){
+    .side-menu-activ {
+        left: 0px !important;
+        z-index: 22 !important;
+    }
+    #menu-window {
+        border-radius: 0px 20px 20px 0px;      
+    }
+}
+
+@media (max-width: 800px) {
+
+    body {
+        width: 100%;
+    }
+    
+    .gog {
+        width: 100%;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .footer {
+        width: 100%;
+        text-align: center;
+        /* height: 50px; */
+    }
+
+    .header-name {
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .logopng {
+        width: 25px;
+    }
+
+    .menu {
+        width: 90px;
+        margin-left: 0;
+    }
+
+    
+    input {
+        margin-left: 30px;
+    }
+
+    .send {
+        margin-right: 20px;
+    }
+
+    .text {
+        max-width: 200px;
+        font-size: 13px;
+    }
+
+    .about-us {
+        font-size: 12px;
+    }
+    
+    .sendmessage {
+        height: 80px;
+    }
+    #name-menu {
+        font-size: 16px;
+    }
+    .sideMenu {
+        font-size: 14px;
+        margin: 15px 5px 0px 5px;
+    }
+}
+@media (max-width: 500px) {
+    #usertext {
+        width: 270px;
+    }
+    
+    #menu-window {
+        width: 175px;
+    }
+ #name-menu {
+        font-size: 14px;
+        text-align: left;
+        font-style: italic;
+        background-color: white;
+        padding: 5px;
+        text-align: center;
+        border-radius: 20px;
+        font-weight: bold;
+        border-bottom: 1px solid black;
+    }
+
+    .sideMenu {
+        font-size: 12px;
+        border-bottom: 0.5px solid black;
+    }
+
+    .information {
+        padding: 10px;
+    }
+}
+@media (max-width: 430px) {
+    #usertext {
+        width: 200px;
+    }
+}

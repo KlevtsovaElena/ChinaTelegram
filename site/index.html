@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <script defer src="./assets/js/main.js"></script>
+    <title>Messenger</title>
+</head>
+<body>
+    <div class="gog margin-top">
+        <div class="header">
+            <div class="menu">
+                <div class="changeBackground" onclick="toggleSideMenu()"><img class="burger" src="./assets/img/menu.png" alt=""></div>
+                <div class="logo">
+                    <img class="logopng" src="./assets/img/header-logo.webp" alt="Messenger">
+                </div>
+            </div>
+            
+            <div class="header-name">China Telegram v2.0
+            </div>
+            
+        </div>
+
+        <div id="menu-window">
+            <div class="cursor right-x" onclick="toggleSideMenu()">✕</div>
+            <div class="information">
+                <div class="sideMenu" id="name-menu"></div>
+                <div class="sideMenu cursor" onclick="changeUserName()">Изменить имя</div>
+                <div class="sideMenu cursor" onclick="toggleWallpapers()">Изменить фон</div>
+             <!--   <div class="status">${something}</div>-->
+                <div id="bg-wallpapers" class="d-none"></div>
+            </div>
+        </div>
+
+        <div id="message">
+        </div>
+
+            <!-- <div class="flex-box ${}">
+                <div class="window">
+                    <div class="name">${name}</div>
+                    <div class="text">${text}</div>
+                    <div class="time">${time}</div>
+                </div>
+            </div>     -->
+        </div>
+        <div class="sendmessage">
+            <img src="./assets/img/fon/img_201721.png" class="emoji" alt="">
+            <div class="border-b"><input id="usertext" type="text" placeholder="Write a message..." oninput="checkMessageInput()"></div>
+            <button class="send non-active" id="btnSendMessageIcon" onclick="addPost()"><img class="send-pic" id="sendMessageBtn" src="./assets/img/fon/sendpng.png"></button>
+        </div>
+        <div class="footer">
+            <div class="about-us">
+        Copyright © 2022 iNordic China-Telegram. All rights reserved.</div>
+        </div>
+    </div>
+    <template id="text-message">
+        <div class="flex-box ${}">
+            <div id = "dateContainer"><div class="showDate">${date}</div></div>
+            <div class="window">
+                <div class="name">${name}</div>
+                <div class="text">${text}</div>
+                <div class="time">${time}</div>
+            </div>
+        </div>
+    </template>
+    <template id="tmpl-wallpapers">
+        <div id="lot" class="lot" style="background-image: url('${image}');" attr-image="${image}" onclick="changeBackgroung()">
+        </div>
+    </template>
+</body>
+</html>
